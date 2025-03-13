@@ -1,24 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider, createTheme, Box } from '@mui/material';
+import { CartProvider } from './context/CartContext';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Products from './pages/Products';
+import CustomDesign from './pages/CustomDesign';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Footer from './components/Footer';
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#1a1a1a',
+    },
+    secondary: {
+      main: '#f50057',
+    },
+  },
+  typography: {
+    fontFamily: '"Poppins", "Arial", sans-serif',
+  },
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CartProvider>
+        <Router>
+          <Box sx={{ 
+            display: 'flex', 
+            flexDirection: 'column',
+            minHeight: '100vh'
+          }}>
+            <Navbar />
+            <Box sx={{ flex: 1 }}>
+              <Routes>
+                <Route path="/" element={<Hero />} />
+                <Route path="/products" element={<Products />} />
+                <Route path="/custom-design" element={<CustomDesign />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+              </Routes>
+            </Box>
+            <Footer />
+          </Box>
+        </Router>
+      </CartProvider>
+    </ThemeProvider>
   );
 }
 
