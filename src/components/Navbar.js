@@ -28,7 +28,14 @@ const Navbar = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const { state } = useCart();
 
-  const menuItems = ['Home', 'Products', 'Custom Design', 'About', 'Contact'];
+  const menuItems = [
+    { name: 'Home', path: '/' },
+    { name: 'Products', path: '/products' },
+    { name: 'Custom Design', path: '/custom-design' },
+    { name: 'About', path: '/about' },
+    { name: 'Contact', path: '/contact' }
+  ];
+
   const cartItemsCount = state.items.reduce((sum, item) => sum + item.quantity, 0);
 
   const handleDrawerToggle = () => {
@@ -60,9 +67,9 @@ const Navbar = () => {
                 {menuItems.map((item) => (
                   <Button 
                     color="inherit" 
-                    key={item} 
+                    key={item.name} 
                     component={Link} 
-                    to={`/${item.toLowerCase().replace(' ', '-')}`}
+                    to={item.path}
                     sx={{
                       fontSize: '1rem',
                       textTransform: 'none',
@@ -71,7 +78,7 @@ const Navbar = () => {
                       }
                     }}
                   >
-                    {item}
+                    {item.name}
                   </Button>
                 ))}
               </Box>
@@ -128,9 +135,9 @@ const Navbar = () => {
           {menuItems.map((item) => (
             <ListItem 
               button 
-              key={item} 
+              key={item.name} 
               component={Link} 
-              to={`/${item.toLowerCase().replace(' ', '-')}`}
+              to={item.path}
               onClick={handleDrawerToggle}
               sx={{
                 '&:hover': {
@@ -139,7 +146,7 @@ const Navbar = () => {
               }}
             >
               <ListItemText 
-                primary={item} 
+                primary={item.name} 
                 sx={{
                   '& .MuiListItemText-primary': {
                     fontSize: '1.1rem'

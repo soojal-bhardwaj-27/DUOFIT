@@ -9,6 +9,7 @@ import CustomDesign from './pages/CustomDesign';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
+import Home from './pages/Home';
 
 const theme = createTheme({
   palette: {
@@ -37,7 +38,7 @@ function App() {
             <Navbar />
             <Box sx={{ flex: 1 }}>
               <Routes>
-                <Route path="/" element={<Hero />} />
+                <Route path="/" element={<Home />} />
                 <Route path="/products" element={<Products />} />
                 <Route path="/custom-design" element={<CustomDesign />} />
                 <Route path="/about" element={<About />} />
