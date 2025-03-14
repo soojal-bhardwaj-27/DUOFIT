@@ -34,10 +34,89 @@ const Products = () => {
       name: 'Hooded Sweatshirt',
       price: 49.99,
       category: 'Hoodies',
-      image: '/images/products/hoodie-1.jpg',
+      image: '/images/products/t-2.png',
       description: 'Warm and cozy hoodie for everyday wear'
     },
-    // Add more products here
+    {
+      id: 3,
+      name: 'Premium Basketball Jersey',
+      price: 59.99,
+      category: 'Jerseys',
+      image: '/images/products/t-3.png',
+      description: 'Professional-grade basketball jersey with moisture-wicking fabric'
+    },
+    {
+      id: 4,
+      name: 'Team Uniform Set',
+      price: 89.99,
+      category: 'Uniforms',
+      image: '/images/products/t-4.png',
+      description: 'Complete team uniform set including jersey and shorts'
+    },
+    {
+      id: 5,
+      name: 'Vintage Logo T-Shirt',
+      price: 34.99,
+      category: 'T-Shirts',
+      image: '/images/products/t-5.png',
+      description: 'Retro-style t-shirt with classic team logo design'
+    },
+    {
+      id: 6,
+      name: 'Performance Zip Hoodie',
+      price: 64.99,
+      category: 'Hoodies',
+      image: '/images/products/t-6.png',
+      description: 'Athletic zip-up hoodie with thermal regulation technology'
+    },
+    {
+      id: 7,
+      name: 'Limited Edition Jersey',
+      price: 79.99,
+      category: 'Jerseys',
+      image: '/images/products/t-7.png',
+      description: 'Collector\'s edition commemorative team jersey'
+    },
+    {
+      id: 8,
+      name: 'Practice Uniform Kit',
+      price: 69.99,
+      category: 'Uniforms',
+      image: '/images/products/t-8.png',
+      description: 'Lightweight practice uniform for training sessions'
+    },
+    {
+      id: 9,
+      name: 'Graphic Print T-Shirt',
+      price: 32.99,
+      category: 'T-Shirts',
+      image: '/images/products/t-9.png',
+      description: 'Bold graphic design t-shirt with team mascot'
+    },
+    {
+      id: 10,
+      name: 'Winter Fleece Hoodie',
+      price: 54.99,
+      category: 'Hoodies',
+      image: '/images/products/t-shirt-1.jpg',
+      description: 'Warm fleece-lined hoodie for cold weather'
+    },
+    {
+      id: 11,
+      name: 'Away Game Jersey',
+      price: 69.99,
+      category: 'Jerseys',
+      image: '/images/products/jersey-3.jpg',
+      description: 'Official away game jersey with team colors'
+    },
+    {
+      id: 12,
+      name: 'Custom Name T-Shirt',
+      price: 39.99,
+      category: 'T-Shirts',
+      image: '/images/products/tshirt-4.jpg',
+      description: 'Customizable t-shirt with your name and number'
+    }
   ];
 
   const categories = ['All', 'T-Shirts', 'Hoodies', 'Jerseys', 'Uniforms'];
